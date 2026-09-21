@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="男士服装搭配网提供专业的男士穿搭指南、商务休闲风格解析、西装与休闲装搭配技巧，以及最新的时尚趋势资讯。">
+    <meta name="keywords" content="男士服装搭配网,男士穿搭,商务男装,休闲搭配,西装搭配">
+    <title>男士服装搭配网-专业男士穿搭指南与风格解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-actions .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .tag:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .more-link {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .more-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Style Cards Grid */
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 200px;
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-box {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .guide-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .guide-list a {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .guide-list a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+            transition: padding 0.2s;
+        }
+
+        .tips-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #795548;
+        }
+
+        /* Specific Styles */
+        .featured-banner {
+            grid-column: 1 / -1;
+            height: 350px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .featured-banner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .featured-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 30px;
+            color: #fff;
+        }
+
+        .featured-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .featured-banner {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>Style</span>Mate
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">商务正装</a></li>
+                    <li><a href="#">休闲穿搭</a></li>
+                    <li><a href="#">潮流趋势</a></li>
+                    <li><a href="#">搭配指南</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="search-btn" aria-label="搜索">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>重塑你的个人风格</h1>
+                <p>无论职场还是生活，为您提供专业的男士服装搭配建议，助您穿出自信与品味。</p>
+                <div class="hero-tags">
+                    <span class="tag">商务通勤</span>
+                    <span class="tag">休闲周末</span>
+                    <span class="tag">约会穿搭</span>
+                    <span class="tag">秋冬进阶</span>
+                    <span class="tag">色彩搭配</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <!-- Left Column -->
+            <div class="content-area">
+                
+                <!-- Featured Section -->
+                <section>
+                    <div class="featured-banner">
+                        <img src="https://picsum.photos/seed/menfashion_hero/1200/400" alt="男士冬季高级穿搭展示">
+                        <div class="featured-text">
+                            <h2>2024秋冬男士进阶穿搭指南</h2>
+                            <p>从大衣到毛衣，掌握叠穿技巧，打造温暖又有型的高级感。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Style Categories -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">热门风格分类</h2>
+                        <a href="#" class="more-link">查看更多 →</a>
+                    </div>
+                    <div class="style-grid">
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/suit/400/300" class="card-img" alt="商务西装搭配">
+                            <div class="card-body">
+                                <span class="card-tag">商务正装</span>
+                                <h3 class="card-title">职场精英：西装的三种经典穿法</h3>
+                                <p class="card-desc">告别沉闷，学会单排扣、双排扣西装的搭配技巧。</p>
+                                <div class="card-footer">
+                                    <span>阅读: 3.2k</span>
+                                    <span>2023-10-24</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/jeans/400/300" class="card-img" alt="休闲牛仔裤搭配">
+                            <div class="card-body">
+                                <span class="card-tag">休闲日常</span>
+                                <h3 class="card-title">牛仔裤的正确打开方式</h3>
+                                <p class="card-desc">直筒、修身、破洞，不同腿型如何选择合适的版型。</p>
+                                <div class="card-footer">
+                                    <span>阅读: 5.8k</span>
+                                    <span>2023-10-22</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/jacket/400/300" class="card-img" alt="风衣搭配">
+                            <div class="card-body">
+                                <span class="card-tag">外套穿搭</span>
+                                <h3 class="card-title">风衣：男人的第二层肌肤</h3>
+                                <p class="card-desc">驼色风衣如何搭配内搭与配饰，打造韩剧男主风。</p>
+                                <div class="card-footer">
+                                    <span>阅读: 2.1k</span>
+                                    <span>2023-10-20</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/shoes/400/300" class="card-img" alt="鞋子搭配">
+                            <div class="card-body">
+                                <span class="card-tag">鞋履指南</span>
+                                <h3 class="card-title">鞋子决定你的下半身风格</h3>
+                                <p class="card-desc">皮鞋、运动鞋、靴子的搭配禁忌与推荐组合。</p>
+                                <div class="card-footer">
+                                    <span>阅读: 1.9k</span>
+                                    <span>2023-10-18</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Color Theory -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">色彩搭配实验室</h2>
+                        <a href="#" class="more-link">学习配色 →</a>
+                    </div>
+                    <div class="style-grid">
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/monochrome/400/300" class="card-img" alt="黑白灰搭配">
+                            <div class="card-body">
+                                <span class="card-tag">基础色系</span>
+                                <h3 class="card-title">黑白灰：永不过时的安全牌</h3>
+                                <p class="card-desc">如何利用同色系搭配增加层次感，避免沉闷。</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/navy/400/300" class="card-img" alt="深蓝色搭配">
+                            <div class="card-body">
+                                <span class="card-tag">进阶配色</span>
+                                <h3 class="card-title">藏青色：最显气质的颜色</h3>
+                                <p class="card-desc">藏青色搭配卡其色、灰色等颜色的详细解析。</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column Sidebar -->
+            <aside>
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title">新手必读</h3>
+                    <ul class="guide-list">
+                        <li><a href="#">男士衣橱基础款清单</a></li>
+                        <li><a href="#">如何根据体型选衣服</a></li>
+                        <li><a href="#">领带打法图解教程</a></li>
+                        <li><a href="#">衬衫选购与保养指南</a></li>
+                        <li><a href="#">男士香水搭配建议</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title">避坑指南</h3>
+                    <ul class="guide-list">
+                        <li><a href="#">这5种裤型千万别穿</a></li>
+                        <li><a href="#">领口形状与脸型匹配</a></li>
+                        <li><a href="#">袖长到底多长才合适</a></li>
+                        <li><a href="#">配饰过多反而减分</a></li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <strong>💡 每日穿搭小贴士：</strong>
+                    <p style="margin-top: 8px;">今天尝试将上衣塞进裤腰，搭配一条腰带，瞬间提升腰线比例。</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <p>男士服装搭配网致力于为现代男性提供实用、时尚的穿搭解决方案，帮助每一位男士发现更自信的自己。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>栏目导航</h3>
+                    <ul>
+                        <li><a href="#">商务风格</a></li>
+                        <li><a href="#">休闲风格</a></li>
+                        <li><a href="#">潮流资讯</a></li>
+                        <li><a href="#">品牌评测</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>实用工具</h3>
+                    <ul>
+                        <li><a href="#">尺码对照表</a></li>
+                        <li><a href="#">风格测试</a></li>
+                        <li><a href="#">配色生成器</a></li>
+                        <li><a href="#">在线咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>邮箱：contact@stylemate.com</li>
+                        <li>合作：business@stylemate.com</li>
+                        <li>地址：北京市朝阳区时尚创意园A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 男士服装搭配网 StyleMate. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
