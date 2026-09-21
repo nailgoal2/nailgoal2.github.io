@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="战网美服官方入口及注册登录指南，提供暴雪游戏（魔兽世界、守望先锋、暗黑破坏神等）美服账号管理、下载安装、版本更新及常见问题解答。">
+    <meta name="keywords" content="战网美服,暴雪游戏,Blizzard,魔兽世界,守望先锋,暗黑破坏神,战网客户端,美服账号">
+    <title>战网美服-暴雪游戏官方平台与账号指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-card: #1f2833;
+            --text-main: #c5c6c7;
+            --text-highlight: #66fcf1;
+            --accent: #45a29e;
+            --border: #2b3642;
+            --font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(11, 12, 16, 0.95);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-highlight);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-highlight);
+        }
+
+        .btn-login {
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: var(--text-highlight);
+            color: var(--bg-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/blizzard/1920/1080.jpg') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #ddd;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--text-highlight);
+            color: var(--bg-dark);
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 252, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--text-highlight);
+            color: var(--text-highlight);
+            padding: 10px 28px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(102, 252, 241, 0.1);
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--text-highlight);
+            padding-left: 15px;
+            color: white;
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--text-highlight);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--text-highlight);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        /* Game List */
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .game-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .game-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .game-info {
+            padding: 20px;
+        }
+
+        .game-tag {
+            font-size: 12px;
+            background-color: rgba(102, 252, 241, 0.1);
+            color: var(--text-highlight);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .game-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .game-desc {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .game-link {
+            font-size: 14px;
+            color: var(--text-highlight);
+            font-weight: 500;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--bg-card);
+            padding: 50px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .guide-content p {
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .step-list {
+            counter-reset: step;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        .guide-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: #888;
+            font-size: 15px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--text-highlight);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050608;
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--text-highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 13px;
+            padding-top: 30px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">战网<span>美服</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#games">游戏库</a></li>
+                    <li><a href="#guide">注册指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-login">立即登录</a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>探索暴雪娱乐的终极游戏世界</h1>
+            <p>连接全球玩家，体验《魔兽世界》、《守望先锋》、《暗黑破坏神》等经典大作的最新内容。战网美服为您提供统一的游戏平台与社区服务。</p>
+            <div class="hero-actions">
+                <a href="#" class="btn-primary">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    下载客户端
+                </a>
+                <a href="#guide" class="btn-secondary">查看注册教程</a>
+            </div>
+        </section>
+
+        <!-- Feature Grid -->
+        <section class="features-grid">
+            <article class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>统一平台管理</h3>
+                <p>一个账号，管理所有暴雪游戏。支持多游戏补丁更新、版本切换及账号安全设置。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>全球同步更新</h3>
+                <p>第一时间体验全球同步的最新游戏内容，包括新版本、新英雄及季节性活动。</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>安全账户体系</h3>
+                <p>内置双重验证与邮箱绑定功能，保障您的游戏资产与个人信息安全。</p>
+            </article>
+        </section>
+
+        <!-- Game Library -->
+        <section id="games">
+            <h2 class="section-title">热门游戏</h2>
+            <div class="game-list">
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/wow/400/300" alt="魔兽世界" class="game-img">
+                    <div class="game-info">
+                        <span class="game-tag">MMORPG</span>
+                        <h3 class="game-title">魔兽世界</h3>
+                        <p class="game-desc">史诗般的奇幻冒险，探索艾泽拉斯的每一个角落，组建公会，挑战世界首领。</p>
+                        <a href="#" class="game-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/ow/400/300" alt="守望先锋" class="game-img">
+                    <div class="game-info">
+                        <span class="game-tag">FPS</span>
+                        <h3 class="game-title">守望先锋</h3>
+                        <p class="game-desc">英雄团队射击游戏，集结全球顶尖选手，体验快节奏的竞技对战。</p>
+                        <a href="#" class="game-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/d3/400/300" alt="暗黑破坏神4" class="game-img">
+                    <div class="game-info">
+                        <span class="game-tag">ARPG</span>
+                        <h3 class="game-title">暗黑破坏神 IV</h3>
+                        <p class="game-desc">踏入黑暗奇幻世界，打造独一无二的毁灭者，挑战无尽的深渊恶魔。</p>
+                        <a href="#" class="game-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/hots/400/300" alt="炉石传说" class="game-img">
+                    <div class="game-info">
+                        <span class="game-tag">卡牌</span>
+                        <h3 class="game-title">炉石传说</h3>
+                        <p class="game-desc">集换式卡牌对战，收集数千张独特的卡牌，构筑你的终极牌组。</p>
+                        <a href="#" class="game-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Registration Guide -->
+        <section id="guide" class="guide-section">
+            <div class="guide-grid">
+                <div class="guide-content">
+                    <h2>战网美服账号注册指南</h2>
+                    <p>注册美服账号需要使用有效的美国地址信息。以下是详细的操作步骤，帮助您顺利创建并激活账号。</p>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <strong>1. 准备美国地址信息</strong>
+                            <p>您需要准备一个有效的美国邮编（ZIP Code）及对应的街道地址。可以使用虚拟地址生成器或借用亲友信息（需确保符合服务条款）。</p>
+                        </div>
+                        <div class="step-item">
+                            <strong>2. 访问战网官网</strong>
+                            <p>打开 Battle.net 官网，点击右上角的“注册”按钮，选择创建“美国”服务器账号。</p>
+                        </div>
+                        <div class="step-item">
+                            <strong>3. 填写注册信息</strong>
+                            <p>输入用户名、密码、电子邮箱，并填写上述准备好的美国地址信息。邮箱需能接收验证邮件。</p>
+                        </div>
+                        <div class="step-item">
+                            <strong>4. 完成验证与绑定</strong>
+                            <p>登录邮箱点击验证链接，建议同时绑定手机号码以增强账户安全性。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-image">
+                    <img src="https://picsum.photos/seed/register/600/400" alt="注册界面示意图">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-item">
+                <div class="faq-question">战网美服账号可以在国内登录吗？</div>
+                <div class="faq-answer">战网美服账号通常需要使用美国地区的网络环境才能流畅访问官方站点和下载游戏。使用国内网络可能存在访问限制或连接不稳定的情况。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">忘记美服账号密码怎么办？</div>
+                <div class="faq-answer">在战网登录页面点击“忘记密码”，输入绑定的邮箱地址。系统会发送重置链接，按照指引设置新密码即可。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何切换战网服务器的地区？</div>
+                <div class="faq-answer">战网客户端不支持直接切换服务器地区。如果您需要访问美服，请确保在官网注册时选择了美国作为服务器区域，并使用美服客户端登录。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">美服账号充值需要什么支付方式？</div>
+                <div class="faq-answer">美服官方支持多种支付方式，包括国际信用卡、PayPal等。部分第三方平台也提供战网充值服务，但请注意选择信誉良好的渠道。</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">关于暴雪</a></li>
+                        <li><a href="#">投资者关系</a></li>
+                        <li><a href="#">工作机会</a></li>
+                        <li><a href="#">媒体报道</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持服务</h4>
+                    <ul>
+                        <li><a href="#">战网支持</a></li>
+                        <li><a href="#">账号安全</a></li>
+                        <li><a href="#">游戏下载</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏</h4>
+                    <ul>
+                        <li><a href="#">魔兽世界</a></li>
+                        <li><a href="#">守望先锋</a></li>
+                        <li><a href="#">暗黑破坏神</a></li>
+                        <li><a href="#">炉石传说</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Blizzard Entertainment, Inc. All rights reserved. 本站为第三方信息聚合与使用指南，非暴雪官方网站。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
