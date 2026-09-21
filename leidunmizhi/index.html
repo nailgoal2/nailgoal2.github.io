@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="雷顿迷之屋攻略 - 全流程解谜指南、隐藏要素收集、道具使用技巧与关卡攻略汇总。助你轻松解开谜题，发现所有秘密。">
+    <meta name="keywords" content="雷顿迷之屋攻略, 雷顿教授, 系列攻略, 益智游戏, 3DS, 逻辑解谜">
+    <title>雷顿迷之屋攻略-全流程解谜指南与隐藏要素收集</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f6f7;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --light-text: #7f8c8d;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: normal;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 160px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-link {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: "→";
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .card-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Guide List Style */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .guide-item:hover {
+            border-left-color: var(--accent-color);
+        }
+
+        .guide-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .guide-item p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        .guide-meta {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #999;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Sidebar Widgets */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .tool-list li {
+            margin-bottom: 10px;
+        }
+
+        .tool-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+
+        .tool-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>⚡</span> 雷顿迷之屋攻略
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#guide">图文攻略</a></li>
+                    <li><a href="#tools">实用工具</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>解开谜题，发现真相</h1>
+                <p>这里是雷顿教授与不可思议的小镇系列的权威攻略站。提供详细的流程解谜步骤、道具使用技巧以及隐藏要素收集指南。</p>
+                <div class="hero-tags">
+                    <span class="tag">3DS / Switch</span>
+                    <span class="tag">逻辑解谜</span>
+                    <span class="tag">全流程通关</span>
+                    <span class="tag">隐藏道具</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-grid">
+            <!-- Main Content Area -->
+            <div class="content-area">
+                
+                <!-- Latest Guides -->
+                <section id="guide">
+                    <div class="section-title">
+                        最新攻略
+                        <a href="#">查看更多 &rarr;</a>
+                    </div>
+                    <div class="card-grid">
+                        <!-- Article 1 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/lemon/400/250" alt="第一章攻略">
+                                <span class="card-badge">热门</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">第一章：小镇谜题全解</h3>
+                                <p class="card-desc">详细介绍小镇广场、侦探事务所的初始谜题。包括如何获得第一把钥匙、解开电话亭谜题以及与老爷爷的对话选择技巧。</p>
+                                <a href="#" class="card-link">阅读完整攻略</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/key/400/250" alt="第二章攻略">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">第二章：港口与灯塔</h3>
+                                <p class="card-desc">深入港口码头，获取重要道具“万能钥匙”和“地图”。攻略灯塔内部的机关排列顺序与谜题解法。</p>
+                                <a href="#" class="card-link">阅读完整攻略</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/map/400/250" alt="第三章攻略">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">第三章：地牢探险指南</h3>
+                                <p class="card-desc">面对复杂的迷宫结构，提供地图绘制技巧。重点解析最终Boss战前的准备工作和必杀技使用时机。</p>
+                                <a href="#" class="card-link">阅读完整攻略</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 4 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/secret/400/250" alt="隐藏要素">
+                                <span class="card-badge">隐藏</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">全道具收集清单</h3>
+                                <p class="card-desc">汇总游戏中所有100个谜题的解法，以及隐藏道具“金羽毛”和“时间胶囊”的获取位置。</p>
+                                <a href="#" class="card-link">查看清单</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Tool List Section -->
+                <section id="tools">
+                    <div class="section-title">
+                        实用工具
+                        <a href="#">查看更多 &rarr;</a>
+                    </div>
+                    <div class="guide-list">
+                        <div class="guide-item">
+                            <h3>谜题快速检索表</h3>
+                            <p>按谜题编号查找解法，无需翻阅长篇大论。</p>
+                            <div class="guide-meta">
+                                <span>📚 文档</span>
+                                <span>👁 12.5k 阅读</span>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <h3>道具合成公式</h3>
+                            <p>整理了所有道具的合成路径，助你快速制作关键装备。</p>
+                            <div class="guide-meta">
+                                <span>🛠 攻略</span>
+                                <span>👁 8.2k 阅读</span>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <h3>流程时间线</h3>
+                            <p>从游戏开始到通关所需的时间预估，以及各章节耗时统计。</p>
+                            <div class="guide-meta">
+                                <span>⏱ 数据</span>
+                                <span>👁 5.1k 阅读</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar Area -->
+            <aside class="sidebar">
+                <!-- Widget: Game Info -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">游戏信息</h3>
+                    <ul class="tool-list">
+                        <li><a href="#">🎮 游戏介绍</a></li>
+                        <li><a href="#">🕹 操作说明</a></li>
+                        <li><a href="#">💾 存档位置</a></li>
+                        <li><a href="#">🎮 难度设置</a></li>
+                    </ul>
+                </div>
+
+                <!-- Widget: Quick Tips -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">新手必读</h3>
+                    <ul class="tool-list">
+                        <li><a href="#">💡 纸条收集技巧</a></li>
+                        <li><a href="#">💡 谜题卡住时的提示</a></li>
+                        <li><a href="#">💡 忽略选项的影响</a></li>
+                        <li><a href="#">💡 存档点位置</a></li>
+                    </ul>
+                </div>
+
+                <!-- Widget: Community -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">玩家社区</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">遇到卡关问题？加入讨论区寻找大神帮助。</p>
+                    <a href="#" class="card-link" style="display:block; text-align:center;">进入讨论区 &rarr;</a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-title">
+                常见问题 (FAQ)
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">Q: 游戏中找不到某个道具怎么办？</div>
+                    <div class="faq-answer">A: 请检查是否遗漏了某个对话选项或未与特定NPC交互。道具通常在对话后自动获得，或者隐藏在某个需要特定道具才能开启的房间角落。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: 可以跳过谜题吗？</div>
+                    <div class="faq-answer">A: 不可以。虽然某些谜题有提示功能，但无法跳过。建议仔细观察场景中的提示，如墙上的涂鸦或物品的摆放规律。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: 游戏支持哪些平台？</div>
+                    <div class="faq-answer">A: 本作主要发售于任天堂3DS平台，部分内容在Nintendo Switch上也有收录。不同平台的存档格式不同，请勿混用。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何解锁结局？</div>
+                    <div class="faq-answer">A: 游戏有多个结局，主要取决于在关键剧情点做出的选择。收集齐所有道具和纸条通常能解锁隐藏结局。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>雷顿迷之屋攻略</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        致力于为玩家提供最详尽、最准确的解谜指南。无论是逻辑推理还是观察细节，我们助你成为真正的解谜大师。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">全章节攻略</a></li>
+                        <li><a href="#">道具大全</a></li>
+                        <li><a href="#">谜题索引</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">任天堂官网</a></li>
+                        <li><a href="#">攻略 Wiki</a></li>
+                        <li><a href="#">游戏论坛</a></li>
+                        <li><a href="#">联系站长</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 雷顿迷之屋攻略网. All Rights Reserved. 本站内容仅供学习交流使用.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
