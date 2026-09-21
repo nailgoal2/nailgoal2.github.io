@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="17500乐彩网提供专业的彩票资讯、开奖结果查询、走势图分析及购彩指南。致力于为彩民提供及时、准确、安全的彩票信息服务平台。">
+    <meta name="keywords" content="17500乐彩网,乐彩网,彩票资讯,开奖查询,走势图,双色球,大乐透,购彩指南">
+    <title>17500乐彩网-专业彩票资讯查询与购彩指南平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f; /* 彩票红 */
+            --secondary-color: #1976d2; /* 蓝色辅助 */
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: white;
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .user-area {
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #ffca28;
+            color: #333;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 202, 40, 0.4);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.25rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        .section-title a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Lottery Grid */
+        .lottery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .lottery-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .lottery-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+        }
+
+        .lottery-icon {
+            width: 50px;
+            height: 50px;
+            background: #ffebee;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem auto;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .lottery-name {
+            font-weight: bold;
+            display: block;
+        }
+
+        .lottery-status {
+            font-size: 0.8rem;
+            color: #4caf50;
+        }
+
+        /* Latest Results */
+        .result-list {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .lottery-tag {
+            background: #e3f2fd;
+            color: var(--secondary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+
+        .numbers {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--text-main);
+        }
+
+        .numbers span {
+            margin: 0 4px;
+        }
+
+        .draw-time {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Sidebar - Tutorials */
+        .tutorial-list article {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tutorial-list h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tutorial-list p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .tutorial-link {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .guide-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .step {
+            flex: 1 1 300px;
+            position: relative;
+        }
+
+        .step-num {
+            background: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .step h4 {
+            margin-bottom: 0.3rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #b0bec5;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #37474f;
+            padding-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>17500</span> 乐彩网
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">开奖查询</a></li>
+                    <li><a href="#">走势图</a></li>
+                    <li><a href="#">购彩技巧</a></li>
+                    <li><a href="#">资讯动态</a></li>
+                </ul>
+            </nav>
+            <div class="user-area">
+                <a href="#">登录</a> | <a href="#">注册</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>全面掌握彩票动态</h1>
+            <p>提供最新的开奖结果查询、专业的走势图分析以及科学的购彩指南。致力于为彩民提供及时、准确、安全的彩票信息服务。</p>
+            <a href="#" class="cta-btn">立即开始查询</a>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        
+        <!-- Left Column -->
+        <div class="content-area">
+            <!-- Hot Games Section -->
+            <section class="section-box">
+                <div class="section-title">
+                    <h2>热门彩票项目</h2>
+                    <a href="#">查看全部 &raquo;</a>
+                </div>
+                <div class="lottery-grid">
+                    <div class="lottery-card">
+                        <div class="lottery-icon">双</div>
+                        <span class="lottery-name">双色球</span>
+                        <span class="lottery-status">21:15 开奖</span>
+                    </div>
+                    <div class="lottery-card">
+                        <div class="lottery-icon">大</div>
+                        <span class="lottery-name">大乐透</span>
+                        <span class="lottery-status">21:30 开奖</span>
+                    </div>
+                    <div class="lottery-card">
+                        <div class="lottery-icon">福</div>
+                        <span class="lottery-name">福彩3D</span>
+                        <span class="lottery-status">20:00 开奖</span>
+                    </div>
+                    <div class="lottery-card">
+                        <div class="lottery-icon">七</div>
+                        <span class="lottery-name">七乐彩</span>
+                        <span class="lottery-status">21:30 开奖</span>
+                    </div>
+                    <div class="lottery-card">
+                        <div class="lottery-icon">南</div>
+                        <span class="lottery-name">南方双彩</span>
+                        <span class="lottery-status">21:15 开奖</span>
+                    </div>
+                    <div class="lottery-card">
+                        <div class="lottery-icon">平</div>
+                        <span class="lottery-name">排列三/五</span>
+                        <span class="lottery-status">21:30 开奖</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Latest Results Section -->
+            <section class="section-box" style="margin-top: 2rem;">
+                <div class="section-title">
+                    <h2>最新开奖结果</h2>
+                    <a href="#">历史开奖 &raquo;</a>
+                </div>
+                <div class="result-list">
+                    <div class="result-item">
+                        <div>
+                            <span class="lottery-tag">大乐透</span>
+                            <span class="numbers">05 12 18 26 33 + 04 09</span>
+                        </div>
+                        <span class="draw-time">2023-10-27</span>
+                    </div>
+                    <div class="result-item">
+                        <div>
+                            <span class="lottery-tag">双色球</span>
+                            <span class="numbers">03 09 15 22 28 31 + 09</span>
+                        </div>
+                        <span class="draw-time">2023-10-27</span>
+                    </div>
+                    <div class="result-item">
+                        <div>
+                            <span class="lottery-tag">福彩3D</span>
+                            <span class="numbers">4 2 9</span>
+                        </div>
+                        <span class="draw-time">2023-10-27</span>
+                    </div>
+                    <div class="result-item">
+                        <div>
+                            <span class="lottery-tag">排列五</span>
+                            <span class="numbers">1 5 8 3 2</span>
+                        </div>
+                        <span class="draw-time">2023-10-27</span>
+                    </div>
+                    <div class="result-item">
+                        <div>
+                            <span class="lottery-tag">七乐彩</span>
+                            <span class="numbers">02 07 11 16 23 29 33</span>
+                        </div>
+                        <span class="draw-time">2023-10-27</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guide Section -->
+            <section class="guide-section">
+                <div class="section-title">
+                    <h2>新手购彩指南</h2>
+                </div>
+                <p style="margin-bottom: 1rem;">初次接触彩票？请阅读以下步骤，了解基本的购彩流程与注意事项。</p>
+                <div class="guide-steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <h4>选择彩种</h4>
+                        <p>根据个人喜好选择双色球、大乐透等不同的彩票类型，了解其规则。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <h4>选择号码</h4>
+                        <p>机选或自选号码，每注需支付对应金额的购彩费用。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <h4>核对信息</h4>
+                        <p>确认投注票上的信息无误，并在规定时间内兑奖。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <aside class="sidebar">
+            <div class="tutorial-list">
+                <div class="section-title">
+                    <h2>热门技巧</h2>
+                </div>
+                
+                <article>
+                    <h3>如何查看走势图？</h3>
+                    <p>走势图能帮助您分析冷热号分布，辅助判断下期走势。</p>
+                    <a href="#" class="tutorial-link">查看教程 &rarr;</a>
+                </article>
+
+                <article>
+                    <h3>大乐透复式投注技巧</h3>
+                    <p>复式投注虽然投入较高，但中奖概率相对单式投注有显著提升。</p>
+                    <a href="#" class="tutorial-link">阅读攻略 &rarr;</a>
+                </article>
+
+                <article>
+                    <h3>双色球红球奇偶比分析</h3>
+                    <p>了解奇偶比的理论范围，结合历史数据寻找规律。</p>
+                    <a href="#" class="tutorial-link">深入学习 &rarr;</a>
+                </article>
+
+                <article>
+                    <h3>理性购彩 健康生活</h3>
+                    <p>彩票是一种娱乐方式，请保持理性，切勿沉迷。</p>
+                    <a href="#" class="tutorial-link">了解详情 &rarr;</a>
+                </article>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>彩票服务</h4>
+                    <ul>
+                        <li><a href="#">双色球查询</a></li>
+                        <li><a href="#">大乐透查询</a></li>
+                        <li><a href="#">走势图下载</a></li>
+                        <li><a href="#">历史数据</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">购彩流程</a></li>
+                        <li><a href="#">兑奖规则</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 17500乐彩网 版权所有 | 本站信息仅供参考，购彩请理性</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
