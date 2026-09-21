@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节俭手抄报 - 精美模板设计、主题构思与制作指南</title>
+    <meta name="description" content="为您提供节俭手抄报设计灵感、精选模板下载及制作教程。涵盖节约粮食、节约用水、绿色生活等热门主题，助您轻松完成高质量手抄报作业。">
+    <meta name="keywords" content="节俭手抄报,手抄报模板,节约主题手抄报,手抄报设计,学校作业">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #ffca28;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f9fbf9;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            padding: 8px 16px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--primary-color);
+            border: 1px solid var(--secondary-color);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* 热门主题网格 */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .btn-link {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 制作指南 */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .guide-sidebar {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 100px;
+        }
+
+        .guide-sidebar h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .step-list li {
+            margin-bottom: 12px;
+        }
+
+        .step-list a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--text-main);
+            transition: background 0.2s;
+        }
+
+        .step-list a:hover {
+            background-color: #f0f7f0;
+            color: var(--primary-color);
+        }
+
+        .step-list .active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .guide-content article {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .guide-content h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .guide-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .tips-box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #795548;
+        }
+
+        /* 常见问题 */
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-sidebar {
+                position: static;
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>模板</span> 节俭手抄报
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#templates">精选模板</a></li>
+                    <li><a href="#guide">制作指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#templates" class="search-btn">浏览模板</a>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>节俭手抄报：创意设计与制作指南</h1>
+            <p>为您提供丰富的节俭主题手抄报设计灵感、配色方案及排版技巧，帮助您轻松完成环保主题的手工作业。</p>
+            <div class="hero-tags">
+                <span class="tag">节约粮食</span>
+                <span class="tag">绿色生活</span>
+                <span class="tag">珍惜资源</span>
+                <span class="tag">低碳环保</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        
+        <!-- 热门主题模板 -->
+        <section id="templates">
+            <div class="section-header">
+                <h2>热门主题模板</h2>
+                <p>以下是最受关注的节俭手抄报设计风格与主题分类</p>
+            </div>
+            <div class="grid-3">
+                <!-- 卡片 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">经典款</span>
+                        <img src="https://picsum.photos/seed/saving1/400/250" alt="节约粮食手抄报模板">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">光盘行动，从我做起</h3>
+                        <p class="card-desc">以红色和绿色为主色调，重点展示“谁知盘中餐，粒粒皆辛苦”的诗句，适合小学生使用。</p>
+                        <div class="card-footer">
+                            <span class="card-meta">难度：中等</span>
+                            <a href="#" class="btn-link">查看详情 →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">创意款</span>
+                        <img src="https://picsum.photos/seed/saving2/400/250" alt="节约用水手抄报模板">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">珍惜每一滴水</h3>
+                        <p class="card-desc">采用蓝色系设计，结合水滴和地球元素，介绍节约用水的具体方法与重要性。</p>
+                        <div class="card-footer">
+                            <span class="card-meta">难度：简单</span>
+                            <a href="#" class="btn-link">查看详情 →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">环保款</span>
+                        <img src="https://picsum.photos/seed/saving3/400/250" alt="低碳生活手抄报模板">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">低碳生活新时尚</h3>
+                        <p class="card-desc">设计风格清新自然，强调减少碳排放、绿色出行的概念，适合初中生及以上。</p>
+                        <div class="card-footer">
+                            <span class="card-meta">难度：较高</span>
+                            <a href="#" class="btn-link">查看详情 →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 制作指南 -->
+        <section id="guide">
+            <div class="section-header">
+                <h2>制作指南与技巧</h2>
+                <p>从构思到落笔，手把手教您制作一份优秀的节俭主题手抄报</p>
+            </div>
+            
+            <div class="guide-layout">
+                <!-- 左侧侧边栏 -->
+                <aside class="guide-sidebar">
+                    <h3>制作步骤</h3>
+                    <ul class="step-list">
+                        <li><a href="#step1">1. 确定主题与版面</a></li>
+                        <li><a href="#step2">2. 绘制边框与底图</a></li>
+                        <li><a href="#step3">3. 填写文字内容</a></li>
+                        <li><a href="#step4">4. 装饰与美化</a></li>
+                        <li><a href="#step5">5. 检查与修正</a></li>
+                    </ul>
+                </aside>
+
+                <!-- 右侧内容区 -->
+                <div class="guide-content">
+                    <article id="step1">
+                        <h3>1. 确定主题与版面</h3>
+                        <p>节俭手抄报的核心在于“惜物”与“循环”。在开始绘画前，先确定一个具体的切入点，例如“节约用电”、“旧物利用”或“拒绝浪费”。版面设计建议采用“报头+板块+插图+报尾”的经典结构。报头应醒目，字体建议使用美术字，颜色可选用深红、墨绿等稳重色调。</p>
+                    </article>
+
+                    <article id="step2">
+                        <h3>2. 绘制边框与底图</h3>
+                        <p>底图是画面的灵魂。对于节俭主题，可以使用枯萎的树枝、破碎的碗筷（寓意浪费）、或者循环的箭头符号作为底纹。边框设计要避免过于花哨，保持整洁。可以使用双线边框、波浪边框或简单的几何图形边框，确保文字不会被遮挡。</p>
+                        <div class="tips-box">
+                            <strong>💡 小贴士：</strong> 剪纸拼贴法非常适合节俭手抄报。利用废旧杂志、报纸上的文字或图案进行剪裁拼贴，既能体现“变废为宝”的主题，又能增加画面的层次感。
+                        </div>
+                    </article>
+
+                    <article id="step3">
+                        <h3>3. 填写文字内容</h3>
+                        <p>文字排版要讲究疏密得当。标题字号最大，正文次之。在填写内容时，可以引用名人名言，如“历览前贤国与家，成由勤俭破由奢”。板块标题可以设计成不同的颜色和形状，引导阅读顺序。注意文字书写要工整，避免潦草。</p>
+                    </article>
+
+                    <article id="step4">
+                        <h3>4. 装饰与美化</h3>
+                        <p>在文字和底图之间，用彩笔或马克笔添加一些装饰性元素，如花朵、绿叶、星星等。颜色搭配上，建议主色不超过三种，保持画面和谐。对于“节约用电”主题，可以画上闪电符号；“节约用水”则画上水流符号。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section id="faq">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="grid-3">
+                <div class="faq-item">
+                    <div class="faq-question">节俭手抄报用什么颜色比较好？</div>
+                    <div class="faq-answer">
+                        节俭主题通常建议使用绿色、蓝色、黄色或红色。绿色代表环保与生机，蓝色代表水资源，黄色代表警示或丰收，红色则代表重要性。避免使用过于暗淡或脏乱的颜色。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何在没有打印机的情况下制作模板？</div>
+                    <div class="faq-answer">
+                        您可以直接在A4纸上用铅笔轻轻画出格子线作为参考。也可以利用废旧报纸的纹理作为底纹，或者手绘简单的几何图形作为边框，并不需要完全依赖打印的模板。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">手抄报内容写多少字合适？</div>
+                    <div class="faq-answer">
+                        一般建议版面内容的字数控制在600-800字左右（含标题）。如果版面较大，可以适当增加；如果版面较小，则精简文字，以图画和简短的口号为主。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 14px; color: #bdc3c7; line-height: 1.8;">
+                        本站致力于为学校师生及手工爱好者提供优质的节俭主题手抄报资源与设计指导，弘扬勤俭节约的传统美德。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">节约粮食主题</a></li>
+                        <li><a href="#">节约用水主题</a></li>
+                        <li><a href="#">旧物改造指南</a></li>
+                        <li><a href="#">环保小知识</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源分类</h4>
+                    <ul>
+                        <li><a href="#">小学版</a></li>
+                        <li><a href="#">初中版</a></li>
+                        <li><a href="#">高中版</a></li>
+                        <li><a href="#">创意DIY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 节俭手抄报设计网. All Rights Reserved. 
+            </div>
+        </div>
+    </footer>
+
+    <!-- 交互脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ 折叠逻辑
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项状态
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 导航栏滚动效果
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
